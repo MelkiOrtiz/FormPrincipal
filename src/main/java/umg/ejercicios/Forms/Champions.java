@@ -8,10 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-public class Champions {
+public class Champions extends JFrame {
     private JPanel jPanelContainer;
 
     public Champions() {
+        setContentPane(jPanelContainer);  // Añade el JPanel al JFrame
+        pack();  // Ajusta el tamaño del JFrame al contenido
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  // Permite cerrar la ventana sin salir de la app
+        setVisible(true);  // Muestra la ventana
         buttonAgregarEquipo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -123,6 +127,7 @@ public class Champions {
         frame.pack();
         frame.setVisible(true);
     }
+
 
     private JLabel lblNombreEquipo;
     private JLabel lblPais;
